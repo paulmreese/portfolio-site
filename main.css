@@ -1,0 +1,231 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 980px;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  font: 100 16px 'Roboto', sans-serif;
+}
+
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+header {
+  border-bottom: 3px solid #7d97ad;
+  padding: 10px;
+}
+
+/*Animated Pure CSS gradient thanks to https://www.gradient-animator.com/*/
+.hypno {
+  background: linear-gradient(270deg, #e71e0d, #f0e708, #08f00d, #08def0, #0563f6, #f605f1);
+  background-size: 1200% 1200%;
+  -webkit-animation: hypno-colors 9s ease infinite;
+  -moz-animation: hypno-colors 9s ease infinite;
+  animation: hypno-colors 9s ease infinite;
+}
+
+@-webkit-keyframes hypno-colors {
+    0% {background-position:0% 50%}
+    50% {background-position:100% 50%}
+    100% {background-position:0% 50%}
+}
+
+@-moz-keyframes hypno-colors {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@keyframes hypno-colors {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* Basic Modifiers */
+
+.right  {
+  float: right;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*Page Title*/
+
+h1 {
+  padding: 15px 0 5px 0;
+  margin: 0 auto;
+  font: 300 2.5em 'Josefin Sans', sans-serif;
+}
+
+h3 {
+  padding: 0;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+/* Main Content */
+
+.main-image {
+  padding: 20px 0;
+}
+
+
+h2 {
+  margin: 0;
+  font: 300 1.75em 'Roboto Light', sans-serif;
+  padding: 5px 0;
+}
+
+/* Featured Work */
+.section-heading {
+  color: #7d97ad;
+  width: 100%;
+  padding: 0 0 20px 10px;
+}
+
+.thirds {
+  width: 33.333%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 0;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #2d3c49;
+  overflow-wrap: break-word;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin: 0 auto;
+  padding: 5px 0;
+  font-size: 12px;
+}
+
+/* Hide on Small Displays */
+
+.large-display {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.8s ease all;
+}
+
+.parallax {
+  display: none;
+}
+
+/* Footer */
+
+.footer-text {
+  margin: 10px auto;
+  padding: 0;
+  line-height: 31px;
+}
+
+.badge {
+  border: 0;
+  width: 88px;
+  height: 31px;
+  margin: 0 10px 10px 0;
+  right: 0;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 800px) {
+  .large-display {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.8s ease-in all;
+  }
+
+  .main-image {
+    display: none;
+  }
+
+  .parallax {
+    background-image: url("http://res.cloudinary.com/paulmreese/image/upload/v1526170314/electricity-technology-colorful-background-header.jpg");
+    min-height: 200px;
+    display: flex;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+  }
+}
+
+@media screen and (min-width: 656px) and (max-width: 700px) {
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  h2 {
+    font-size: 1.35em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 1.25em;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  h1 {
+    font-size: 2em;
+    padding-top: 20px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .thirds {
+    width: 100%;
+  }
+
+  .project-image {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
