@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  font: 100 16px 'Roboto', sans-serif;
+  font: 100 16px "Roboto", sans-serif;
 }
 
 img,
@@ -29,7 +29,16 @@ section {
 
 header {
   border-bottom: 3px solid #7d97ad;
-  padding: 10px;
+}
+
+header,
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
 /*Animated Pure CSS gradient thanks to https://www.gradient-animator.com/*/
@@ -39,6 +48,7 @@ header {
   -webkit-animation: hypno-colors 9s ease infinite;
   -moz-animation: hypno-colors 9s ease infinite;
   animation: hypno-colors 9s ease infinite;
+  margin: 10px;
 }
 
 @-webkit-keyframes hypno-colors {
@@ -62,7 +72,8 @@ header {
 /* Basic Modifiers */
 
 .right  {
-  float: right;
+  flex-direction: row-reverse;
+  margin: 10px;
 }
 
 .text-right {
@@ -82,13 +93,13 @@ header {
 h1 {
   padding: 15px 0 5px 0;
   margin: 0 auto;
-  font: 300 2.5em 'Josefin Sans', sans-serif;
+  font: 300 2.5em "Josefin Sans", sans-serif;
 }
 
 h3 {
   padding: 0;
   margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
 
@@ -101,7 +112,7 @@ h3 {
 
 h2 {
   margin: 0;
-  font: 300 1.75em 'Roboto Light', sans-serif;
+  font: 300 1.75em "Roboto Light", sans-serif;
   padding: 5px 0;
 }
 
@@ -151,7 +162,7 @@ p {
 /* Footer */
 
 .footer-text {
-  margin: 10px auto;
+  margin: 16px auto;
   padding: 0;
   line-height: 31px;
 }
@@ -161,7 +172,9 @@ p {
   width: 88px;
   height: 31px;
   margin: 0 10px 10px 0;
-  right: 0;
+  position: absolute;
+  right: 5px;
+  padding: 10px;
 }
 
 /* Media Queries */
